@@ -16,8 +16,28 @@ As a homework, we have to participate in the cats vs dogs redux challenge on htt
 
 A general to-do list is managed here, finer details will be handled in a jupyter notebook.
 
-- [] get p2.large machine up and running
-- [] get competition data handling script up and running (inside a notebook?)
-- [] Train and finetune on p2.large instance!
-- [] prepare kaggle submission
+- [x] get p2.large machine up and running
+- [x] get competition data handling script up and running (inside a notebook?)
+- [x] Train and finetune on p2.large instance!
+- [ ] Visualize results: correctly classified, incorrectly classified and so on, in the notebook
+- [ ] prepare kaggle submission
+
+## Journal
+
+I got the p2.large machine up and running, week-one assignments are handled in the corresponding notebook. Finetuning the model took approx. 8 minutes, using a batchsize of 32. Monitoring the GPU revealed that only approx 1GB of RAM was utilized, presumably, I can use a larger batch size.
+
+Result: 
+```
+Epoch 1/1
+20000/20000 [==============================] - 640s - loss: 0.2420 - acc: 0.9543 - val_loss: 0.1680 - val_acc: 0.9743
+```
+
+A validation accuracy of 97% looks highly promising to me. We will build on that!
+
+
+I saved the model using
+
+```
+vgg.model.save_weights(path + 'results/2017-01-25-week-one-bs32')
+```
 
