@@ -22,8 +22,20 @@ A general to-do list is managed here, finer details will be handled in a jupyter
 - [ ] Visualize results: correctly classified, incorrectly classified and so on, in the notebook
 - [ ] prepare kaggle submission
 
+### Minor points, idea collection
+
+- [ ] In keras, model.fit(...) returns the history of training and validation losses and metrics over epochs. We should keep this.
+
+
 ## Journal
 
+### Week one, homework
+
+For prediction, we cannot  use the test images directly; instead, we need preprocssing to generate numpy arrays. Keras provides a `predict_generator()` method which should be quite helpful here.
+
+Also, we should look into data augmentation, as provided by the image data generator; this may help to push the accuracy further. 
+
+### 2017-01-25 Week one, homework
 I got the p2.large machine up and running, week-one assignments are handled in the corresponding notebook. Finetuning the model took approx. 8 minutes, using a batchsize of 32. Monitoring the GPU revealed that only approx 1GB of RAM was utilized, presumably, I can use a larger batch size.
 
 Result: 
