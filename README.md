@@ -22,9 +22,10 @@ A general to-do list is managed here, finer details will be handled in a jupyter
 - [ ] Visualize results: correctly classified, incorrectly classified and so on, in the notebook
 - [ ] prepare kaggle submission
 
-### Minor points, idea collection
+### Idea collection
 
 - [ ] In keras, model.fit(...) returns the history of training and validation losses and metrics over epochs. We should keep this.
+- [ ] If we pick all 4096 values from the last dense layer, for each image, we should be able to use these features for a more conventional workup. Are these predictions well-separated? Look at tSNE! can we use a random forest, or whatever, for prediction? And finally, how does this RF fare against the dense layer?
 
 
 ## Journal
